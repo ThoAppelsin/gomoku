@@ -1,19 +1,5 @@
 <!doctype html>
 <title>GOMOKU</title>
-{% if move %}
-Got move {{ move }}!
-{% else %}
-Some stuff!
-<script>
-    function doit() {
-        fetch('/', {
-            body: JSON.stringify({asd: 1}),
-            headers: new Headers({
-                'Content-Type': 'application/json'
-            }),
-            method: 'POST'
-        })
-    }
-</script>
-<button onclick="doit()">haha</button>
-{% endif %}
+<link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+<body></body>
+<script src="{{ url_for('static', filename='app.js') }}"></script>

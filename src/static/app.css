@@ -1,0 +1,55 @@
+.board {
+    display: grid;
+    width: 100%;
+
+    background-color: rgb(70, 189, 129);
+}
+
+.tile {
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+.tile::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.tile>div {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.available:hover>div {
+    background-image: url('x.svg');
+    background-size: 100% 100%;
+    background-size: contain;
+
+    opacity: 0.5;
+}
+
+.available:active>div {
+    opacity: 0.8;
+}
+
+.x>div {
+    background-image: url('x.svg');
+    background-size: 100% 100%;
+    background-size: contain;
+}
+
+.o>div {
+    background-image: url('o.svg');
+    background-size: 100% 100%;
+    background-size: contain;
+}
+
+.winbox {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+
+    font-size: 16vw;
+    text-align: center;
+}
